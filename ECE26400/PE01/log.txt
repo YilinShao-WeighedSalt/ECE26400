@@ -1,0 +1,83 @@
+==2488175== Memcheck, a memory error detector
+==2488175== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==2488175== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==2488175== Command: ./pe01
+==2488175== Parent PID: 2327692
+==2488175== 
+==2488175== Conditional jump or move depends on uninitialised value(s)
+==2488175==    at 0x490AAD6: __vfprintf_internal (vfprintf-internal.c:1516)
+==2488175==    by 0x490B664: buffered_vfprintf (vfprintf-internal.c:2261)
+==2488175==    by 0x48F46C9: fprintf (fprintf.c:32)
+==2488175==    by 0x10936C: print_array (pe01.c:26)
+==2488175==    by 0x1093F3: test_smallest_partial_sum (pe01.c:43)
+==2488175==    by 0x1094FD: test_00_smallest_partial_sum (pe01.c:63)
+==2488175==    by 0x109789: main (pe01.c:154)
+==2488175== 
+==2488175== Use of uninitialised value of size 8
+==2488175==    at 0x48EE2EB: _itoa_word (_itoa.c:177)
+==2488175==    by 0x4909ABD: __vfprintf_internal (vfprintf-internal.c:1516)
+==2488175==    by 0x490B664: buffered_vfprintf (vfprintf-internal.c:2261)
+==2488175==    by 0x48F46C9: fprintf (fprintf.c:32)
+==2488175==    by 0x10936C: print_array (pe01.c:26)
+==2488175==    by 0x1093F3: test_smallest_partial_sum (pe01.c:43)
+==2488175==    by 0x1094FD: test_00_smallest_partial_sum (pe01.c:63)
+==2488175==    by 0x109789: main (pe01.c:154)
+==2488175== 
+==2488175== Conditional jump or move depends on uninitialised value(s)
+==2488175==    at 0x48EE2FC: _itoa_word (_itoa.c:177)
+==2488175==    by 0x4909ABD: __vfprintf_internal (vfprintf-internal.c:1516)
+==2488175==    by 0x490B664: buffered_vfprintf (vfprintf-internal.c:2261)
+==2488175==    by 0x48F46C9: fprintf (fprintf.c:32)
+==2488175==    by 0x10936C: print_array (pe01.c:26)
+==2488175==    by 0x1093F3: test_smallest_partial_sum (pe01.c:43)
+==2488175==    by 0x1094FD: test_00_smallest_partial_sum (pe01.c:63)
+==2488175==    by 0x109789: main (pe01.c:154)
+==2488175== 
+==2488175== Conditional jump or move depends on uninitialised value(s)
+==2488175==    at 0x490A5C3: __vfprintf_internal (vfprintf-internal.c:1516)
+==2488175==    by 0x490B664: buffered_vfprintf (vfprintf-internal.c:2261)
+==2488175==    by 0x48F46C9: fprintf (fprintf.c:32)
+==2488175==    by 0x10936C: print_array (pe01.c:26)
+==2488175==    by 0x1093F3: test_smallest_partial_sum (pe01.c:43)
+==2488175==    by 0x1094FD: test_00_smallest_partial_sum (pe01.c:63)
+==2488175==    by 0x109789: main (pe01.c:154)
+==2488175== 
+==2488175== Conditional jump or move depends on uninitialised value(s)
+==2488175==    at 0x4909C05: __vfprintf_internal (vfprintf-internal.c:1516)
+==2488175==    by 0x490B664: buffered_vfprintf (vfprintf-internal.c:2261)
+==2488175==    by 0x48F46C9: fprintf (fprintf.c:32)
+==2488175==    by 0x10936C: print_array (pe01.c:26)
+==2488175==    by 0x1093F3: test_smallest_partial_sum (pe01.c:43)
+==2488175==    by 0x1094FD: test_00_smallest_partial_sum (pe01.c:63)
+==2488175==    by 0x109789: main (pe01.c:154)
+==2488175== 
+==2488175== Invalid read of size 4
+==2488175==    at 0x10934D: print_array (pe01.c:26)
+==2488175==    by 0x1093F3: test_smallest_partial_sum (pe01.c:43)
+==2488175==    by 0x1095A8: test_00_smallest_partial_sum (pe01.c:77)
+==2488175==    by 0x109789: main (pe01.c:154)
+==2488175==  Address 0x4ac0040 is 0 bytes after a block of size 0 alloc'd
+==2488175==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==2488175==    by 0x109587: test_00_smallest_partial_sum (pe01.c:75)
+==2488175==    by 0x109789: main (pe01.c:154)
+==2488175== 
+==2488175== Invalid read of size 4
+==2488175==    at 0x1097C2: smallest_partial_sum (answer01.c:20)
+==2488175==    by 0x109404: test_smallest_partial_sum (pe01.c:44)
+==2488175==    by 0x1095A8: test_00_smallest_partial_sum (pe01.c:77)
+==2488175==    by 0x109789: main (pe01.c:154)
+==2488175==  Address 0x4ac0040 is 0 bytes after a block of size 0 alloc'd
+==2488175==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==2488175==    by 0x109587: test_00_smallest_partial_sum (pe01.c:75)
+==2488175==    by 0x109789: main (pe01.c:154)
+==2488175== 
+==2488175== 
+==2488175== HEAP SUMMARY:
+==2488175==     in use at exit: 0 bytes in 0 blocks
+==2488175==   total heap usage: 1 allocs, 1 frees, 0 bytes allocated
+==2488175== 
+==2488175== All heap blocks were freed -- no leaks are possible
+==2488175== 
+==2488175== Use --track-origins=yes to see where uninitialised values come from
+==2488175== For lists of detected and suppressed errors, rerun with: -s
+==2488175== ERROR SUMMARY: 38 errors from 7 contexts (suppressed: 0 from 0)
